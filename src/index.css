@@ -1,0 +1,20 @@
+/* Example styles.css or App.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.footer-section .footer-links li {
+  @apply mb-2;
+}
+
+.social-icons svg {
+  @apply w-6 h-6;
+}
+
+.btn-primary {
+  @apply bg-blue-500 text-white py-2 px-6 rounded-lg shadow-md hover:bg-blue-600 transition duration-300;
+}
+
+.input-field {
+  @apply w-full py-2 px-4 mb-2 mr-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-blue-500;
+}
