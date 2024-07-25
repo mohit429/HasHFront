@@ -79,7 +79,7 @@ const Header = () => {
       );
       if (response.status === 200) {
         console.log('Post created:', response.data);
-        navigate("/dashboard");
+        window.location.reload();
       } else {
         alert("Failed to create post");
       }
