@@ -19,7 +19,7 @@ const Header = () => {
 
   useEffect ( () => {
     setLoading(true);
-    axios.get(`https://hashbackend.onrender.com/api/v1/blog/bulk?filter=${searchValue}`, {
+    axios.get("https://hashbackend.onrender.com/api/v1/blog/bulk?filter=${searchValue}", {
       headers: {
         authorization: 'Bearer ' + token
       }
@@ -33,7 +33,7 @@ const Header = () => {
         await Promise.all(uniqueAuthorIds.map(async (authorId) => {
           try {
             const authorResponse = await axios.post(
-              `https://hashbackend.onrender.com/api/v1/namewithauthId`,
+              "https://hashbackend.onrender.com/api/v1/namewithauthId",
               { id: authorId },
               {
                 headers: {
@@ -64,7 +64,7 @@ const Header = () => {
     event.preventDefault();
     try {
       const response = await axios.post(
-        `https://hashbackend.onrender.com/api/v1/blog`, 
+        "https://hashbackend.onrender.com/api/v1/blog", 
         {
           userId,
           title,

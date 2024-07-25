@@ -20,7 +20,7 @@ const Profile = () => {
     const fetchBlogs = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(`https://hashbackend.onrender.com/api/v1/blog/bulk?filter`, {
+        const response = await axios.get("https://hashbackend.onrender.com/api/v1/blog/bulk?filter", {
           headers: {
             authorization: 'Bearer ' + token
           }
@@ -41,7 +41,7 @@ const Profile = () => {
     event.preventDefault();
     try {
       const response = await axios.post(
-        `https://hashbackend.onrender.com/api/v1/blog`, 
+        "https://hashbackend.onrender.com/api/v1/blog", 
         {
           userId,
           title,
@@ -72,7 +72,7 @@ const Profile = () => {
     event.preventDefault();
     try {
       const response = await axios.post(
-        `https://hashbackend.onrender.com/api/v1/Updateblog`,
+        "https://hashbackend.onrender.com/api/v1/Updateblog",
         {
           userId,
           postId: currentBlogId,
@@ -103,7 +103,7 @@ const Profile = () => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`https://hashbackend.onrender.com/api/v1/deleteblog`, {
+      await axios.delete("https://hashbackend.onrender.com/api/v1/deleteblog", {
         data: { userId, postId: id },
         headers: {
           authorization: 'Bearer ' + token
