@@ -19,7 +19,7 @@ const Header = () => {
 
   useEffect ( () => {
     setLoading(true);
-    axios.get("https://hashbackend.onrender.com/api/v1/blog/bulk?filter=${searchValue}", {
+    axios.get("https://hashbackend.onrender.com/api/v1/blog/bulk?filter=" + searchValue, {
       headers: {
         authorization: 'Bearer ' + token
       }
