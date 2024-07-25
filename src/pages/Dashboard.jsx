@@ -8,7 +8,7 @@ export const Dashboard = () => {
     const navigate=useNavigate();
     useEffect(()=>{
         if (!localStorage.getItem("token")) {
-            navigate('/home');
+            navigate('/');
             return;
         }
     })

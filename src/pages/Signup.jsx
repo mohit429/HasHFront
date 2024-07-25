@@ -36,7 +36,7 @@ const Signup = () => {
   return (
     <div className="h-screen flex items-center justify-center bg-gradient-to-r from-stone-400 via-lime-200 to-cyan-500">
       <button
-        onClick={() => navigate('/home')}
+        onClick={() => navigate('/')}
         className="absolute top-4 right-4 p-3 bg-gray-500 text-white rounded-full hover:bg-gray-600 transition flex items-center"
       >
         <FontAwesomeIcon icon={faHome} className="text-lg" />
