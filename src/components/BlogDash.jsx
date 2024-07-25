@@ -58,7 +58,7 @@ const Header = () => {
         setError(err.message);
         setLoading(false);
       });
-  }, [searchValue,posts]);
+  }, [searchValue]);
 
   const handleCreatePost = async (event) => {
     event.preventDefault();
